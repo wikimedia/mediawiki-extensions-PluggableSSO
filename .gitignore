@@ -4,3 +4,4 @@
 .\#*
 .tramp_history
 PHPTAGS.sqlite
+node_modules/
