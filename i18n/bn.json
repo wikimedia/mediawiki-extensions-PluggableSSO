@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"pluggablesso-desc": "PluggableAuth-এর সাথে সংযুক্ত $REMOTE_USER-এর মধ্যে ওয়েব সার্ভার দ্বারা সরবরাহিত SSO ব্যবহার করে",
