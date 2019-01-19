@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
+	"pluggablesso-extensionname": "SSO قابل للتركيب",
 	"pluggablesso-desc": "يستخدم SSO التي يوفرها خادم الويب في $REMOTE_USER بالتزامن مع PluggableAuth",
 	"pluggablesso-no-session": "لا يوجد اسم مستخدم; فشلت الجلسة بطريقة أو بأخرى.",
 	"pluggablesso-username-mismatch": "اسم المستخدم لم يطابق الجلسة"
