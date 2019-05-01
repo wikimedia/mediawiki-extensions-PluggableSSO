@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Protnet"
 		]
 	},
-	"pluggablesso-username-mismatch": "Το όνομα χρήστη δεν αντιστοιχεί με την συνεδρία"
+	"pluggablesso-username-mismatch": "Το όνομα χρήστη δεν αντιστοιχεί με την περίοδο σύνδεσης"
 }
