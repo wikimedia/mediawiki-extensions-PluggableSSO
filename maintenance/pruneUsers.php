@@ -54,7 +54,7 @@ class PruneUsers extends Maintenance {
 
 	public function execute() {
 		global $wgAuth, $wgUser;
-		$dbw = wfGetDB( DB_SLAVE );
+		$dbw = wfGetDB( DB_REPLICA );
 
 		$users = $dbw->select(
 			'user',
