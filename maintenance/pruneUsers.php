@@ -46,8 +46,8 @@ class PruneUsers extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 
-		$this->mDescription = "Prune users from database that " .
-			"that no longer exist in the SSO source";
+		$this->addDescription( "Prune users from database that " .
+			"that no longer exist in the SSO source" );
 
 		$this->requireExtension( 'PluggableSSO' );
 	}
