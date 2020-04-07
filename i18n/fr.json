@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Wladek92",
-			"Urhixidur"
+			"Urhixidur",
+			"Wladek92"
 		]
 	},
 	"pluggablesso-desc": "Utilise le SSO fourni par le serveur web en $REMOTE_USER, en lien avec PluggableAuth",
