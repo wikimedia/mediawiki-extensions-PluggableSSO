@@ -22,16 +22,16 @@
 
 namespace PluggableSSO;
 
-use Hooks;
-use MWException;
-use PluggableAuth;
 use MediaWiki\Session\SessionManager;
-use PluggableAuthLogin;
+use PluggableAuth;
 use RequestContext;
 use User;
 
 abstract class PluggableSSO extends PluggableAuth {
 
+	/**
+	 * @return Config
+	 */
 	protected function getConfig() {
 		return RequestContext::getMain()->getConfig();
 	}
@@ -48,7 +48,7 @@ abstract class PluggableSSO extends PluggableAuth {
 	 * @param string &$realname real name of user
 	 * @param string &$email email address of user
 	 * @param string &$errorMessage error message to return
-	 * @return boolean false if the username does not match what is in
+	 * @return bool false if the username does not match what is in
 	 *     the session
 	 *
 	 * @SuppressWarnings("CamelCaseVariableName")
@@ -76,7 +76,7 @@ abstract class PluggableSSO extends PluggableAuth {
 
 		$ssoRealName = $this->discoverRealname();
 		if ( $ssoRealName && $realname !== $ssoRealName ) {
-			wfDebugLog( __METHOD__, "Updating real name from '$realname' ".
+			wfDebugLog( __METHOD__, "Updating real name from '$realname' " .
 						"to '$ssoRealName'\n" );
 			$realname = $ssoRealName;
 		}
@@ -93,7 +93,7 @@ abstract class PluggableSSO extends PluggableAuth {
 
 	/**
 	 * @param User &$user user that is logging out
-	 * @return boolean
+	 * @return bool
 	 *
 	 * @SuppressWarnings("UnusedFormalParameter")
 	 */
@@ -103,7 +103,7 @@ abstract class PluggableSSO extends PluggableAuth {
 
 	/**
 	 * @param int $identity user id
-	 * @return boolean
+	 * @return bool
 	 *
 	 * @SuppressWarnings("UnusedFormalParameter")
 	 */

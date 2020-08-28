@@ -25,23 +25,22 @@
  * @author Mark A. Hershberger * @ingroup Maintenance
  */
 
-
 // Allow people to have different layouts.
-if ( ! isset( $IP ) ) {
+if ( !isset( $IP ) ) {
 	$IP = __DIR__ . '/../../..';
-	if ( getenv("MW_INSTALL_PATH") ) {
-		$IP = getenv("MW_INSTALL_PATH");
+	if ( getenv( "MW_INSTALL_PATH" ) ) {
+		$IP = getenv( "MW_INSTALL_PATH" );
 	}
 }
 
-require_once( "$IP/maintenance/Maintenance.php" );
+require_once "$IP/maintenance/Maintenance.php";
 
 class PruneUsers extends Maintenance {
 	protected $deleted = 0;
 	protected $deleteFailed = 0;
 	protected $skipped = 0;
 	protected $kept = 0;
-    protected $toDelete = [];
+	protected $toDelete = [];
 
 	public function __construct() {
 		parent::__construct();
@@ -58,9 +57,9 @@ class PruneUsers extends Maintenance {
 
 		$users = $dbw->select(
 			'user',
-			array(
+			[
 				'user_id',
-			)
+			]
 		);
 		ConocoPhillips::onPluggableSSOAuth( $wgAuth );
 		while ( $dbUser = $users->fetchObject() ) {
@@ -75,7 +74,7 @@ class PruneUsers extends Maintenance {
 			}
 			if ( !$keep && $this->canRemoveUser( $wgUser ) ) {
 				$this->output( "will delete" );
-                $this->toDelete[] = $wgUser->getID();
+				$this->toDelete[] = $wgUser->getID();
 			} else {
 				$this->output( "skipped" );
 				$this->skipped++;
@@ -92,6 +91,10 @@ class PruneUsers extends Maintenance {
 		$this->output( "failed to delete: {$this->deleteFailed}\n" );
 	}
 
+	/**
+	 * @param User $user
+	 * @return bool
+	 */
 	public function userStillExists( User $user ) {
 		global $wgAuth;
 
@@ -104,6 +107,10 @@ class PruneUsers extends Maintenance {
 		return true;
 	}
 
+	/**
+	 * @param User $user
+	 * @return bool
+	 */
 	public function canRemoveUser( User $user ) {
 		if ( $user->getId() == 1 ) {
 			return false;
@@ -111,6 +118,10 @@ class PruneUsers extends Maintenance {
 		return RemoveUnusedAccounts::isInactiveAccount( $user->getId() );
 	}
 
+	/**
+	 * @param User $user
+	 * @return false
+	 */
 	public function deleteUser( User $user ) {
 		$this->deleteFailed++;
 		return false;
