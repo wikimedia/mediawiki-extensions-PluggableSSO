@@ -62,7 +62,7 @@ class PruneUsers extends Maintenance {
 			]
 		);
 		ConocoPhillips::onPluggableSSOAuth( $wgAuth );
-		while ( $dbUser = $users->fetchObject() ) {
+		foreach ( $users as $dbUser ) {
 			$wgUser = User::newFromId( $dbUser->user_id );
 			$wgAuth->resetADData();
 			$this->output( "Checking $wgUser ... " );
