@@ -128,5 +128,5 @@ class PruneUsers extends Maintenance {
 	}
 }
 
-$maintClass = "PruneUsers";
+$maintClass = PruneUsers::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
