@@ -58,7 +58,16 @@ abstract class PluggableSSO extends PluggableAuth {
 		&$identity, &$username, &$realname, &$email, &$errorMessage
 	) {
 		if ( $identity === null && $username ) {
-			$identity = User::idFromName( $username );
+			if ( method_exists( MediaWikiServices::class, 'getUserIdentityLookup' ) ) {
+				// MW 1.36+
+				$userIdentity = MediaWikiServices::getInstance()->getUserIdentityLookup()
+					->getUserIdentityByName( $username );
+				if ( $userIdentity && $userIdentity->isRegistered() ) {
+					$identity = $userIdentity->getId();
+				}
+			} else {
+				$identity = User::idFromName( $username );
+			}
 		}
 		if ( !$username ) {
 			$session = SessionManager::getGlobalSession();
