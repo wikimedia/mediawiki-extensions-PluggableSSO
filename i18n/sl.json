@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"HairyFotr"
+			"HairyFotr",
+			"Eleassar"
 		]
 	},
+	"pluggablesso-desc": "Uporablja SSO (enkratni vpis), ki ga zagotovi spletni strežnik v $REMOTE_USER, v kombinaciji s PluggableAuth",
+	"pluggablesso-no-session": "Pridobljeno ni bilo nobeno uporabniško ime; seja je nekako spodletela.",
 	"pluggablesso-username-mismatch": "Uporabniško ime se ni skladalo s sejo"
 }
