@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Winston Sung"
 		]
 	},
 	"pluggablesso-desc": "Koristi SSO koji pruža server u $REMOTE_USER zajedno s PluggableAuth",
