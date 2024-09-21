@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * This script checks to see if the users added via SSO still exist in
  * the SSO source.  If not it will remove them.
@@ -53,7 +55,7 @@ class PruneUsers extends Maintenance {
 
 	public function execute() {
 		global $wgAuth, $wgUser;
-		$dbw = wfGetDB( DB_REPLICA );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 
 		$users = $dbw->select(
 			'user',
