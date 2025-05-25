@@ -81,8 +81,7 @@ class SessionProvider extends CookieSessionProvider {
 	protected function checkMultiDomain( $username ) {
 		$conf = $this->getConfig();
 		$remoteDomain = $conf->get( 'AuthRemoteuserDomain' );
-		$remoteDomains = array_flip
-					   ( array_merge( [ $remoteDomain ],
+		$remoteDomains = array_flip( array_merge( [ $remoteDomain ],
 									  $conf->get( 'AuthRemoteuserDomains' )
 					   ) );
 		$bits = explode( '@', $username );
