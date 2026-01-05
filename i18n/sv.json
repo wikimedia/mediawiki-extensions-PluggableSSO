@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
+	"pluggablesso-desc": "Använder SSO som tillhandahålls av webbservern i $REMOTE_USER tillsammans med PluggableAuth",
 	"pluggablesso-no-session": "Inget användarnamn hämtades, session misslyckades.",
 	"pluggablesso-username-mismatch": "Användarnamn matchade inte session"
 }
