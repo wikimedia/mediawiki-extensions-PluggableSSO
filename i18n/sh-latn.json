@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Aca"
 		]
 	},
 	"pluggablesso-desc": "Koristi SSO koji pruža server u $REMOTE_USER zajedno s PluggableAuth",
-	"pluggablesso-no-session": "Nisam dobio korisničko ime. Sesija nekako nije uspjela.",
+	"pluggablesso-no-session": "Korisničko ime nije pribavljeno. Sesija nije uspjela.",
 	"pluggablesso-username-mismatch": "Korisničko ime ne odgovara sesiji"
 }
