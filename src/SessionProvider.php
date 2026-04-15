@@ -28,8 +28,6 @@ use RequestContext;
 use WebRequest;
 
 class SessionProvider extends CookieSessionProvider {
-	protected $config;
-
 	/**
 	 * Provide session info for a request.  Only comes into play if
 	 * the parent doesn't provide a user.
