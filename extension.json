@@ -28,6 +28,10 @@
 	"SessionProviders": {
 		"PluggableSSO\\SessionProvider": {
 			"class": "PluggableSSO\\SessionProvider",
+			"services": [
+				"JwtCodec",
+				"UrlUtils"
+			],
 			"args": [ {
 				"priority": 50,
 				"callUserSetCookiesHook": true
