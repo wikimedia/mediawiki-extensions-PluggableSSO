@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Ucukor"
 		]
 	},
 	"pluggablesso-desc": "Ужывае SSO, які забясьпечвае вэбсэрвэр у $REMOTE_USER у спалучэньні з PluggableAuth",
-	"pluggablesso-no-session": "Не атрымана імя ўдзельніка, сэсія неяк не атрымалася.",
+	"pluggablesso-no-session": "Не атрымана імя ўдзельніка, сэсія неяк не ўдалася.",
 	"pluggablesso-username-mismatch": "Імя ўдзельніка не адпавядае сэсіі"
 }
