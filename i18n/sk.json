@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"pluggablesso-desc": "Používa SSO poskytované webovým serverom v premennej $REMOTE_USER v spojení s rozšírením PluggableAuth",
+	"pluggablesso-no-session": "Nebolo získané používateľské meno, relácia nejako zlyhala.",
+	"pluggablesso-username-mismatch": "Používateľské meno nezodpovedá relácii"
+}
